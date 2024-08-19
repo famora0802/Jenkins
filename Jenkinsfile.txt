@@ -23,12 +23,7 @@ pipeline {
             }
         }
         
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                // Commandes de déploiement ici
-            }
-        }
+      
         stage('Notify') {
             steps {
                 echo 'Notifying...'
