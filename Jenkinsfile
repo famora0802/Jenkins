@@ -13,9 +13,9 @@ pipeline {
                 echo 'Testing...'
                 // Exécution du script Python EasyTest.py
                 script {
-                    def pythonScript = 'TEST_Jenkins.py'
+                    def pythonScript = 'EasyTest.py'
                     def command = "python ${pythonScript}"
-                    def result = sh(script: command, returnStatus: true)
+                    def result = bat(script: command, returnStatus: true)
                     if (result != 0) {
                         error "Python script failed with status ${result}"
                     }
