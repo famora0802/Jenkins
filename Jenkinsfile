@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing...'
                 // Exécution du script Python EasyTest.py
                 script {
-                    def pythonScript = 'EasyTest.py'
+                    def pythonScript = 'TEST_Jenkins.py'
                     def command = "python ${pythonScript}"
                     def result = bat(script: command, returnStatus: true)
                     if (result != 0) {
